@@ -21,7 +21,7 @@ namespace Problem4
                     }
                 }
             }
-            Euler.Utils.OutputAnwser(candidate.ToString());
+            Euler.Utils.OutputAnswer(candidate.ToString());
 
         }
     }
