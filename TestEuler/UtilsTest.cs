@@ -22,6 +22,9 @@ namespace TestEuler
             Assert.AreEqual(Utils.IsPrime(5), true);
             Assert.AreEqual(Utils.IsPrime(6), false);
             Assert.AreEqual(Utils.IsPrime(7), true);
+
+            Assert.AreEqual(Utils.IsPrime(0), false);
+            Assert.AreEqual(Utils.IsPrime(1), false);
         }
 
 
