@@ -15,7 +15,7 @@ namespace Problem6
             long sumOfSquares = squares.Sum();
             long sum = range.Sum();
             long squareOfSum = sum * sum;
-            Euler.Utils.OutputAnwser(Math.Abs(sumOfSquares - squareOfSum).ToString());
+            Euler.Utils.OutputAnswer(Math.Abs(sumOfSquares - squareOfSum).ToString());
 
 
         }

@@ -20,7 +20,7 @@ namespace Problem5
                     found = (n % i == 0);
                 }
             }
-            Euler.Utils.OutputAnwser(n.ToString());
+            Euler.Utils.OutputAnswer(n.ToString());
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Euler
 {
     public class Utils
     {
-        public static void OutputAnwser(string s)
+        public static void OutputAnswer(string s)
         {
             Console.WriteLine(s);
             Console.ReadLine();
@@ -16,6 +16,7 @@ namespace Euler
 
         public static bool IsPrime(long n)
         {
+            if (n < 2) { return false; }
             double target = Math.Sqrt((double)n);
             for (long i = 2; i <= target; i++)
             {
@@ -52,6 +53,8 @@ namespace Euler
                 }
             }
         }
+
+
 
         public static IEnumerable<long> PrimeFactors(long n)
         {
