@@ -102,7 +102,6 @@ namespace TestEuler
         public void TrianglesTest()
         {
 
-            long upTo = 0; // TODO: Initialize to an appropriate value
             var expected = new List<long>() { 1, 3, 6, 10, 15, 21, 28 };
             IEnumerable<long> actual = Utils.Triangles(29);
 
@@ -129,6 +128,25 @@ namespace TestEuler
             Assert.AreEqual(4, Utils.NumDivisors(15));
             Assert.AreEqual(4, Utils.NumDivisors(21));
             Assert.AreEqual(6, Utils.NumDivisors(28));
+        }
+
+        /// <summary>
+        ///A test for Collatz
+        ///</summary>
+        [TestMethod()]
+        public void CollatzTest()
+        {
+            IEnumerable<long> output = Utils.Collatz(13);
+            Assert.AreEqual(13, output.ElementAt(0));
+            Assert.AreEqual(40, output.ElementAt(1));
+            Assert.AreEqual(20, output.ElementAt(2));
+            Assert.AreEqual(10, output.ElementAt(3));
+            Assert.AreEqual(5, output.ElementAt(4));
+            Assert.AreEqual(16, output.ElementAt(5));
+            Assert.AreEqual(8, output.ElementAt(6));
+            Assert.AreEqual(4, output.ElementAt(7));
+            Assert.AreEqual(2, output.ElementAt(8));
+            Assert.AreEqual(1, output.ElementAt(9));
         }
     }
 }
