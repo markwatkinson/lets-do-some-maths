@@ -82,5 +82,31 @@ namespace Euler
             }
             return true;
         }
+
+        public static IEnumerable<long> Triangles(long upTo = 0)
+        {
+            long i = 1;
+            long sum = i;
+            while (upTo <= 0 || sum < upTo)
+            {
+                yield return sum;
+                sum += ++i;
+            }
+        }
+
+        public static long NumDivisors(long n)
+        {
+            // if memory serves, if a number n has prime factors
+            // a^x * b^y * c^z, then it has 
+            // (x+1) * (y+1)* (z+1) divisors
+            List<long> factors = PrimeFactors(n).ToList();
+            long product = 1;
+            foreach (long factor in factors.Distinct())
+            {
+                int count = factors.Where(x => x == factor).Count();
+                product *= (count + 1);
+            }
+            return product;
+        }
     }
 }
