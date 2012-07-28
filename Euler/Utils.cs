@@ -92,11 +92,38 @@ namespace Euler
         }
 
         /// <summary>
+        /// Return the set of divisors for a number. 
+        /// Divisors will be sorted in ascending order, and may include 1 but
+        /// not n.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static IList<long> Divisors(long n)
+        {
+            var divisors = new List<long>();
+            if (n >= 1) {
+                divisors.Add(1);
+            }
+            double limit = Math.Ceiling(Math.Sqrt(n));
+            for (long i = 2; i < limit; i++)
+            {
+                if (n % i == 0)
+                {
+                    divisors.Add(i);
+                    divisors.Add(n / i);
+                }
+            }
+            divisors.Sort();
+            return divisors;
+        }
+
+        /// <summary>
         /// Return whether or not a number is palindromic
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
-        public static bool IsPalindrome(long n) {
+        public static bool IsPalindrome(long n)
+        {
             // easiest way, I think, is to convert it to a string.
             // We could mess around with modulos base 10, but let's not.
             string s = "" + n;

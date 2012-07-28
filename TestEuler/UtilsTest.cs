@@ -148,5 +148,20 @@ namespace TestEuler
             Assert.AreEqual(2, output.ElementAt(8));
             Assert.AreEqual(1, output.ElementAt(9));
         }
+
+        /// <summary>
+        ///A test for Divisors
+        ///</summary>
+        [TestMethod()]
+        public void DivisorsTest()
+        {
+            long n = 220; // TODO: Initialize to an appropriate value
+            IList<long> actual = null; // TODO: Initialize to an appropriate value
+            List<long> expected = new List<long> {
+                1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110
+            };
+            actual = Utils.Divisors(n);
+            Assert.AreEqual(true, actual.SequenceEqual(expected));
+        }
     }
 }
