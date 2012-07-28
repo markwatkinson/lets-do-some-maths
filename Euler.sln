@@ -44,7 +44,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem016", "Problem016\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem017", "Problem017\Problem017.csproj", "{F9B9AF27-366F-4BB6-BE34-CCE4CDDEFCC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem18", "Problem18\Problem18.csproj", "{CE3A9114-F60B-4DA4-A8DC-731DF70C1C68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem018", "Problem18\Problem018.csproj", "{CE3A9114-F60B-4DA4-A8DC-731DF70C1C68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem019", "Problem019\Problem019.csproj", "{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -249,6 +251,16 @@ Global
 		{CE3A9114-F60B-4DA4-A8DC-731DF70C1C68}.Release|Mixed Platforms.Build.0 = Release|x86
 		{CE3A9114-F60B-4DA4-A8DC-731DF70C1C68}.Release|x86.ActiveCfg = Release|x86
 		{CE3A9114-F60B-4DA4-A8DC-731DF70C1C68}.Release|x86.Build.0 = Release|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Debug|x86.ActiveCfg = Debug|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Debug|x86.Build.0 = Debug|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Release|Any CPU.ActiveCfg = Release|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Release|x86.ActiveCfg = Release|x86
+		{9422BAE5-14BD-493B-AEE8-10F2FC897DCA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
