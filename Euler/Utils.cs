@@ -13,7 +13,11 @@ namespace Euler
             Console.ReadLine();
         }
 
-
+        /// <summary>
+        /// Determines whether a number is prime.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static bool IsPrime(long n)
         {
             if (n < 2) { return false; }
@@ -25,6 +29,13 @@ namespace Euler
             return true;
         }
 
+        /// <summary>
+        /// Returns a range of numbers 
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <param name="step"></param>
+        /// <returns></returns>
         public static IEnumerable<long> Range(long start, long end, long step=1)
         {
             for (long i = start; i < end; i += step)
@@ -34,6 +45,11 @@ namespace Euler
         }
 
 
+        /// <summary>
+        /// Generates a sequence of primes, optionally up to a given number
+        /// </summary>
+        /// <param name="upTo"></param>
+        /// <returns></returns>
         public static IEnumerable<long> GeneratePrimes(long upTo = 100)
         {
             // Prime sieve, standard algorithm
@@ -55,7 +71,11 @@ namespace Euler
         }
 
 
-
+        /// <summary>
+        /// Calculates the prime factors of a given number
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static IEnumerable<long> PrimeFactors(long n)
         {
             // http://stackoverflow.com/questions/23287/prime-factors
@@ -71,6 +91,11 @@ namespace Euler
             }
         }
 
+        /// <summary>
+        /// Return whether or not a number is palindromic
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static bool IsPalindrome(long n) {
             // easiest way, I think, is to convert it to a string.
             // We could mess around with modulos base 10, but let's not.
@@ -83,6 +108,11 @@ namespace Euler
             return true;
         }
 
+        /// <summary>
+        /// Return a sequence of triangular numbers
+        /// </summary>
+        /// <param name="upTo"></param>
+        /// <returns></returns>
         public static IEnumerable<long> Triangles(long upTo = 0)
         {
             long i = 1;
@@ -94,6 +124,11 @@ namespace Euler
             }
         }
 
+        /// <summary>
+        /// Calculates the numbers of divisors a number has
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static long NumDivisors(long n)
         {
             // if memory serves, if a number n has prime factors
@@ -109,6 +144,11 @@ namespace Euler
             return product;
         }
 
+        /// <summary>
+        /// Returns a Collatz sequence-chain for a number
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static IEnumerable<long> Collatz(long n)
         {            
             while (n > 1)

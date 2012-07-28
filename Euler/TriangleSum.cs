@@ -5,9 +5,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 namespace Euler
 {
-    /**
-     * As used by problem 18 and 67 
-     */
+    /// <summary>
+    /// As used by problem 18 and 67 - a triangle of numbers through which
+    /// we have to calculate the highest route (sum)
+    /// 
+    /// </summary>
     public class TriangleSum
     {
         private List<List<int>> triangle;
@@ -20,10 +22,12 @@ namespace Euler
             }
         }
 
-        /**
-         * Set the triangle from a string. Rows are delimited by newline characters and
-         * individual numbers by spaces
-         */
+        
+        /// <summary>
+        /// Set the triangle from a string. Rows are delimited by newline characters and
+        /// individual numbers by spaces
+        /// </summary>
+        /// <param name="s"></param>
         public void Set(string s)
         {
             triangle = new List<List<int>>();
