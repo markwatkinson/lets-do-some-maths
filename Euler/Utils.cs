@@ -248,8 +248,26 @@ namespace Euler
                 list[oppositeIndex] = temp;
             }
             return list;
+        }
 
+        /// <summary>
+        /// Returns fibonacci terms indefinitely
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> Fibonacci()
+        {
+            long a = 1, b = 1, t;
+            yield return a;
+            yield return b;
 
+            while (true)
+            {
+                t = a + b;
+                a = b;
+                b = t;
+                yield return b;
+            }
+            
         }
     }
 }

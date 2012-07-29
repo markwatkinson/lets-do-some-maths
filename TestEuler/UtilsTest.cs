@@ -197,6 +197,24 @@ namespace TestEuler
             Assert.AreEqual(Utils.LexicographicPermutation<Int32>(list), null);
         }
 
-      
+
+
+        /// <summary>
+        ///A test for Fibonacci
+        ///</summary>
+        [TestMethod()]
+        public void FibonacciTest()
+        {
+            IEnumerable<long> list = new List<long>() {
+                1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+            };
+
+            IEnumerable<long> output = Utils.Fibonacci();
+
+            for (int i = 0; i < list.Count(); i++)
+            {
+                Assert.AreEqual(list.ElementAt(i), output.ElementAt(i));
+            }
+        }
     }
 }
