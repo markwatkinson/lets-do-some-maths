@@ -162,6 +162,41 @@ namespace TestEuler
             };
             actual = Utils.Divisors(n);
             Assert.AreEqual(true, actual.SequenceEqual(expected));
+
+            n = 36;
+            expected = new List<long>{
+                1, 2, 3, 4, 6, 9, 12, 18
+            };
+            actual = Utils.Divisors(n);
+            Assert.AreEqual(true, actual.SequenceEqual(expected));
         }
+
+        /// <summary>
+        ///A test for LexicographicPermutation
+        ///</summary>
+        [TestMethod()]
+        public void LexicographicPermutationTestHelper()
+        {
+            var list = new List<Int32> { 0, 1, 2 };
+
+            list = Utils.LexicographicPermutation<Int32>(list).ToList();
+            Assert.AreEqual(true, list.SequenceEqual(new List<Int32> { 0, 2, 1 }));
+
+            list = Utils.LexicographicPermutation<Int32>(list).ToList();
+            Assert.AreEqual(true, list.SequenceEqual(new List<Int32> { 1, 0, 2 }));
+
+            list = Utils.LexicographicPermutation<Int32>(list).ToList();
+            Assert.AreEqual(true, list.SequenceEqual(new List<Int32> { 1, 2, 0 }));
+
+            list = Utils.LexicographicPermutation<Int32>(list).ToList();
+            Assert.AreEqual(true, list.SequenceEqual(new List<Int32> { 2, 0, 1 }));
+
+            list = Utils.LexicographicPermutation<Int32>(list).ToList();
+            Assert.AreEqual(true, list.SequenceEqual(new List<Int32> { 2, 1, 0 }));
+
+            Assert.AreEqual(Utils.LexicographicPermutation<Int32>(list), null);
+        }
+
+      
     }
 }

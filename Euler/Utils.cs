@@ -104,15 +104,17 @@ namespace Euler
             if (n >= 1) {
                 divisors.Add(1);
             }
-            double limit = Math.Ceiling(Math.Sqrt(n));
-            for (long i = 2; i < limit; i++)
+            double limit = Math.Sqrt(n);
+            for (long i = 2; i <= limit; i++)
             {
                 if (n % i == 0)
                 {
                     divisors.Add(i);
+                    long pair = n / i;
                     divisors.Add(n / i);
                 }
             }
+            divisors = divisors.Distinct().ToList();
             divisors.Sort();
             return divisors;
         }
@@ -191,6 +193,63 @@ namespace Euler
                 }
             }
             yield return n;
+        }
+
+
+        public static IEnumerable<T> LexicographicPermutation<T>(IEnumerable<T> previous) where T : IComparable
+        {
+            // http://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
+            int k = -1;
+            // Find the largest index k such that a[k] < a[k + 1]. 
+            // If no such index exists, the permutation is the last permutation.
+            for (int i = previous.Count() - 2; i >= 0; i--)
+            {
+                T ak, akPlusOne;
+                ak = previous.ElementAt(i);
+                akPlusOne = previous.ElementAt(i + 1);
+                if (ak.CompareTo(akPlusOne) < 0)
+                {
+                    k = i;
+                    break;
+                }
+            }
+            if (k == -1) { return null; }
+
+            // Find the largest index l such that a[k] < a[l]. 
+            // Since k + 1 is such an index, l is well defined and satisfies k < l.
+            int l = k + 1;
+            T ak_ = previous.ElementAt(k);
+            for (int i = previous.Count() - 1; i > k; i--)
+            {
+                T al = previous.ElementAt(i);
+                if (ak_.CompareTo(al) < 0)
+                {
+                    l = i;
+                    break;
+                }
+            }
+
+            //Swap a[k] with a[l].
+            // we'll drop down to a list now for convenience
+            List<T> list = previous.ToList();
+            list[k] = previous.ElementAt(l);
+            list[l] = previous.ElementAt(k);
+
+            // Reverse the sequence from a[k + 1] up to and including the final element a[n].
+
+            int lowerBound = k + 1;
+            int upperBound = list.Count();
+            int limit = lowerBound + (upperBound - lowerBound) / 2;
+            for (int i = lowerBound; i < limit; i++)
+            {
+                int oppositeIndex = upperBound - 1 - (i - lowerBound);
+                T temp = list[i];
+                list[i] = list[oppositeIndex];
+                list[oppositeIndex] = temp;
+            }
+            return list;
+
+
         }
     }
 }

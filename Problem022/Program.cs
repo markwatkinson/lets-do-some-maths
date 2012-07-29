@@ -38,10 +38,6 @@ namespace Problem022
             for (int i = 0; i < values.Count(); i++)
             {
                 total += (i + 1) * values[i];
-                if (i == 937)
-                {
-                    int x;
-                }
             }
             Euler.Utils.OutputAnswer(total.ToString());
 
