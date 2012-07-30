@@ -269,5 +269,17 @@ namespace Euler
             }
             
         }
+
+        public static long ModPow(long number, long exponent, long mod)
+        {
+            long product = 1;
+            for (long i = 0; i < exponent; i++)
+            {
+                product *= number;
+                product = product % mod;
+            }
+            return product;
+
+        }
     }
 }

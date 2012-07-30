@@ -216,5 +216,16 @@ namespace TestEuler
                 Assert.AreEqual(list.ElementAt(i), output.ElementAt(i));
             }
         }
+
+        /// <summary>
+        ///A test for ModPow
+        ///</summary>
+        [TestMethod()]
+        public void ModPowTest()
+        {   
+            Assert.AreEqual(100, Utils.ModPow(10, 2, 101));
+            Assert.AreEqual(0, Utils.ModPow(10, 2, 100));
+            Assert.AreEqual(0, Utils.ModPow(10, 2, 10));
+        }
     }
 }
