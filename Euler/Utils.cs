@@ -279,7 +279,26 @@ namespace Euler
                 product = product % mod;
             }
             return product;
+        }
 
+
+        /// <summary>
+        /// Greatest common divisor
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static long gcd(long a, long b)
+        {
+            //euclid's algorithm
+            long t;
+            while (b != 0)
+            {
+                t = b;
+                b = a % b;
+                a = t;
+            }
+            return a;
         }
     }
 }

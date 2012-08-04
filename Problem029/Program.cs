@@ -10,7 +10,7 @@ namespace Problem029
     {
         static void Main(string[] args)
         {
-            BigInteger pow;
+
             var results = new List<BigInteger>();
 
             for (int a = 2; a <= 100; a++)
