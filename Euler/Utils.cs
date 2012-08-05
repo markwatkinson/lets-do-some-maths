@@ -325,5 +325,28 @@ namespace Euler
             } while (n > 0);
             return s;
         }
+
+
+        /// <summary>
+        /// Determine whether the given number is a triangle number, i.e.
+        /// numbers calculated by t_n = 1/2 * n * (n + 1)
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static bool IsTriangle(long t)
+        {
+            // t = 1/2 * n(n+1)
+            // and thus we have a quadratic:
+            // 0 = (1/2n**2) + 1/2n - t
+            // so if the determinant b**2 - 4ac is greater than or equal to zero we have
+            // real solutions, but we only care about integer solutions
+
+            double determinant = 0.25 - 2 * (-1) * t;
+            if (determinant < 0) return false;
+            double x1, x2;
+            x1 = (-0.5 + Math.Sqrt(determinant));
+            x2 = (-0.5 - Math.Sqrt(determinant));
+            return (x1 % 1 == 0 || x2 % 1 == 0);
+        }
     }
 }

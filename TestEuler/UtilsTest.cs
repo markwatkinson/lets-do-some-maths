@@ -243,5 +243,29 @@ namespace TestEuler
             Assert.AreEqual("100", Utils.ToBinary(4));
             Assert.AreEqual("1001001001", Utils.ToBinary(585));
         }
+
+        /// <summary>
+        ///A test for IsTriangle
+        ///</summary>
+        [TestMethod()]
+        public void IsTriangleTest()
+        {
+            // 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
+            Assert.AreEqual(true, Utils.IsTriangle(1));
+            Assert.AreEqual(true, Utils.IsTriangle(3));
+            Assert.AreEqual(true, Utils.IsTriangle(6));
+            Assert.AreEqual(true, Utils.IsTriangle(10));
+            Assert.AreEqual(true, Utils.IsTriangle(15));
+            Assert.AreEqual(true, Utils.IsTriangle(21));
+            Assert.AreEqual(true, Utils.IsTriangle(28));
+            Assert.AreEqual(true, Utils.IsTriangle(36));
+            Assert.AreEqual(true, Utils.IsTriangle(45));
+            Assert.AreEqual(true, Utils.IsTriangle(55));
+
+            Assert.AreEqual(false, Utils.IsTriangle(2));
+            Assert.AreEqual(false, Utils.IsTriangle(4));
+            Assert.AreEqual(false, Utils.IsTriangle(5));
+            Assert.AreEqual(false, Utils.IsTriangle(7));
+        }
     }
 }
