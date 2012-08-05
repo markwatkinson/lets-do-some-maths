@@ -227,5 +227,21 @@ namespace TestEuler
             Assert.AreEqual(0, Utils.ModPow(10, 2, 100));
             Assert.AreEqual(0, Utils.ModPow(10, 2, 10));
         }
+
+        /// <summary>
+        ///A test for ToBinary
+        ///</summary>
+        [TestMethod()]
+        public void ToBinaryTest()
+        {
+            // NOTE: ToBinary doesn't yet work for negative numbers but
+            // as we don't need that yet we're omitting test cases for it
+            Assert.AreEqual("0", Utils.ToBinary(0));
+            Assert.AreEqual("1", Utils.ToBinary(1));
+            Assert.AreEqual("10", Utils.ToBinary(2));
+            Assert.AreEqual("11", Utils.ToBinary(3));
+            Assert.AreEqual("100", Utils.ToBinary(4));
+            Assert.AreEqual("1001001001", Utils.ToBinary(585));
+        }
     }
 }

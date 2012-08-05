@@ -119,22 +119,30 @@ namespace Euler
             return divisors;
         }
 
+
+        /// <summary>
+        /// Return whether or not a string is palindromic
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static bool IsPalindrome(string s)
+        {
+            int limit = s.Length / 2;
+            for (int i = 0; i < limit; i++)
+            {
+                if (s[i] != s[s.Length - 1 - i]) { return false; }
+            }
+            return true;
+        }
+
         /// <summary>
         /// Return whether or not a number is palindromic
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
         public static bool IsPalindrome(long n)
-        {
-            // easiest way, I think, is to convert it to a string.
-            // We could mess around with modulos base 10, but let's not.
-            string s = "" + n;
-            int limit = s.Length/2;
-            for (int i = 0; i < limit; i++)
-            {
-                if (s[i] != s[s.Length - 1 - i]) { return false; }
-            }
-            return true;
+        {            
+            return IsPalindrome(n.ToString());
         }
 
         /// <summary>
@@ -299,6 +307,23 @@ namespace Euler
                 a = t;
             }
             return a;
+        }
+
+        /// <summary>
+        /// Converts a positive integer to a binary string
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static string ToBinary(long n)
+        {
+            string s = "";
+            do
+            {
+                string mod = (n % 2).ToString();
+                s = mod + s;
+                n = n >> 1;
+            } while (n > 0);
+            return s;
         }
     }
 }
