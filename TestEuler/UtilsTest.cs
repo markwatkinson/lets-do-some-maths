@@ -267,5 +267,33 @@ namespace TestEuler
             Assert.AreEqual(false, Utils.IsTriangle(5));
             Assert.AreEqual(false, Utils.IsTriangle(7));
         }
+
+
+        [TestMethod()]
+        public void PermutationsTest()
+        {
+            List<int> set = new List<int>() {  1, 2, 3 };
+
+            IEnumerable<IEnumerable<int>> output = Utils.Permutations(set);
+
+            List<List<int>> expected = new List<List<int>>() {
+                new List<int>() { 1, 2, 3},
+                new List<int>() { 1, 3, 2},
+                new List<int>() { 2, 1, 3},
+                new List<int>() { 2, 3, 1},
+                new List<int>() { 3, 1, 2},
+                new List<int>() { 3, 2, 1},
+            };
+
+            Assert.AreEqual(expected.Count(), output.Count());
+            Assert.AreEqual(true, Enumerable.SequenceEqual(output.ElementAt(0), expected[0]));
+            Assert.AreEqual(true, Enumerable.SequenceEqual(output.ElementAt(1), expected[1]));
+            Assert.AreEqual(true, Enumerable.SequenceEqual(output.ElementAt(2), expected[2]));
+            Assert.AreEqual(true, Enumerable.SequenceEqual(output.ElementAt(3), expected[3]));
+            Assert.AreEqual(true, Enumerable.SequenceEqual(output.ElementAt(4), expected[4]));
+            Assert.AreEqual(true, Enumerable.SequenceEqual(output.ElementAt(5), expected[5]));
+
+
+        }
     }
 }

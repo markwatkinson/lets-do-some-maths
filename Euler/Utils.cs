@@ -203,6 +203,35 @@ namespace Euler
             yield return n;
         }
 
+        /// <summary>
+        /// Returns a set of permutations (lexicocgraphically ordered) for the given 
+        /// set of elements
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="startSet"></param>
+        /// <returns></returns>
+        public static IEnumerable<IEnumerable<T>> Permutations<T>(IEnumerable<T> startSet) where T : IComparable
+        {
+            List<List<T>> sets = new List<List<T>>();
+            List<T> prev = startSet.ToList();
+            prev.Sort();
+            sets.Add(prev);
+            while (true)
+            {
+                IEnumerable<T> next = LexicographicPermutation(prev);
+                if (next != null)
+                {
+                    List<T> n = next.ToList();
+                    sets.Add(n);
+                    prev = n;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return sets;
+        }
 
         public static IEnumerable<T> LexicographicPermutation<T>(IEnumerable<T> previous) where T : IComparable
         {
