@@ -295,5 +295,29 @@ namespace TestEuler
 
 
         }
+
+        /// <summary>
+        ///A test for IsPentagonal
+        ///</summary>
+        [TestMethod()]
+        public void IsPentagonalTest()
+        {
+            // 1, 5, 12, 22, 35, 51, 70, 92, 117, 145, ...
+            Assert.AreEqual(true, Utils.IsPentagonal(1));
+            Assert.AreEqual(true, Utils.IsPentagonal(5));
+            Assert.AreEqual(true, Utils.IsPentagonal(12));
+            Assert.AreEqual(true, Utils.IsPentagonal(22));
+            Assert.AreEqual(true, Utils.IsPentagonal(35));
+            Assert.AreEqual(true, Utils.IsPentagonal(51));
+            Assert.AreEqual(true, Utils.IsPentagonal(70));
+            Assert.AreEqual(true, Utils.IsPentagonal(92));
+            Assert.AreEqual(true, Utils.IsPentagonal(117));
+            Assert.AreEqual(true, Utils.IsPentagonal(145));
+
+            Assert.AreEqual(false, Utils.IsPentagonal(2));
+            Assert.AreEqual(false, Utils.IsPentagonal(3));
+            Assert.AreEqual(false, Utils.IsPentagonal(4));
+            Assert.AreEqual(false, Utils.IsPentagonal(6));
+        }
     }
 }

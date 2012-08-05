@@ -375,7 +375,26 @@ namespace Euler
             double x1, x2;
             x1 = (-0.5 + Math.Sqrt(determinant));
             x2 = (-0.5 - Math.Sqrt(determinant));
-            return (x1 % 1 == 0 || x2 % 1 == 0);
+            return (x1 % 1 == 0 && x1 >= 0 || x2 % 1 == 0 && x2 >= 0);
+        }
+
+        /// <summary>
+        /// Determine whether a number is a pentagonal number, i.e.
+        /// p_n =  n(3n-1)/2
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static bool IsPentagonal(long p)
+        {
+            // n(3n-1)/2
+            // (3n**2 - n)/2
+            // => 1.5n**2 - 0.5n - p = 0
+            double d = 0.25 - 4 * 1.5 * (-1) * p;
+            if (d < 0) return false;
+            double x1, x2;
+            x1 = (+0.5 + Math.Sqrt(d))/3;
+            x2 = (+0.5 - Math.Sqrt(d))/3;
+            return (x1 % 1 == 0 && x1 >= 0 || x2 % 1 == 0 && x2 >= 0);
         }
     }
 }
