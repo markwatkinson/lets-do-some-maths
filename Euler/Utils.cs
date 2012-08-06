@@ -162,6 +162,25 @@ namespace Euler
         }
 
         /// <summary>
+        /// Return a sequence of hexagonal numbers
+        /// </summary>
+        /// <param name="upTo"></param>
+        /// <returns></returns>
+        public static IEnumerable<long> Hexagonals(long upTo = 0)
+        {
+            long n = 1;
+            // H_n=n(2n-1)
+            long term = 1;
+            while (term <= upTo || upTo <= 0)
+            {
+                yield return term;
+                n++;
+                term = 2 * n * n - n;
+            }
+
+        }
+
+        /// <summary>
         /// Calculates the numbers of divisors a number has
         /// </summary>
         /// <param name="n"></param>

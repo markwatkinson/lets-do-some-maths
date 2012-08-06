@@ -319,5 +319,19 @@ namespace TestEuler
             Assert.AreEqual(false, Utils.IsPentagonal(4));
             Assert.AreEqual(false, Utils.IsPentagonal(6));
         }
+
+        /// <summary>
+        ///A test for Hexagonals
+        ///</summary>
+        [TestMethod()]
+        public void HexagonalsTest()
+        {
+            IEnumerable<long> expected = new List<long>() {
+                1, 6, 15, 28, 45
+            };
+            IEnumerable<long> actual;
+            actual = Utils.Hexagonals(45);
+            Assert.AreEqual(true, Enumerable.SequenceEqual(expected, actual));
+        }
     }
 }
