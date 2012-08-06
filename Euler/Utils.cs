@@ -415,5 +415,17 @@ namespace Euler
             x2 = (+0.5 - Math.Sqrt(d))/3;
             return (x1 % 1 == 0 && x1 >= 0 || x2 % 1 == 0 && x2 >= 0);
         }
+
+        /// <summary>
+        /// Returns whether a number is square, i.e. n = x*x where x is an integer
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static bool IsSquare(long n)
+        {
+            // is there a fsater way to do this than relying
+            // on an expensive sqrt?
+            return Math.Sqrt(n) % 1 == 0;
+        }
     }
 }

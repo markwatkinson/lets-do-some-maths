@@ -333,5 +333,19 @@ namespace TestEuler
             actual = Utils.Hexagonals(45);
             Assert.AreEqual(true, Enumerable.SequenceEqual(expected, actual));
         }
+
+        /// <summary>
+        ///A test for IsSquare
+        ///</summary>
+        [TestMethod()]
+        public void IsSquareTest()
+        {          
+            Assert.AreEqual(true, Utils.IsSquare(1));
+            Assert.AreEqual(true, Utils.IsSquare(4));
+            Assert.AreEqual(true, Utils.IsSquare(9));
+            Assert.AreEqual(true, Utils.IsSquare(16));
+            Assert.AreEqual(false, Utils.IsSquare(2));
+            Assert.AreEqual(false, Utils.IsSquare(3));
+        }
     }
 }
