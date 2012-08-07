@@ -347,5 +347,15 @@ namespace TestEuler
             Assert.AreEqual(false, Utils.IsSquare(2));
             Assert.AreEqual(false, Utils.IsSquare(3));
         }
+
+        /// <summary>
+        ///A test for Choose
+        ///</summary>
+        [TestMethod()]
+        public void ChooseTest()
+        {
+            Assert.AreEqual(10, Utils.Choose(5, 3));
+            Assert.AreEqual(1144066, Utils.Choose(23, 10));
+        }
     }
 }

@@ -114,6 +114,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem051", "Problem051\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem052", "Problem052\Problem052.csproj", "{6F8E3F0E-A740-434C-B11A-AA019E0C17AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem053", "Problem053\Problem053.csproj", "{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem054", "Problem054\Problem054.csproj", "{1BA40CAC-7B6F-4919-92EC-9952343E17FF}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Euler.vsmdi
@@ -657,6 +661,26 @@ Global
 		{6F8E3F0E-A740-434C-B11A-AA019E0C17AA}.Release|Mixed Platforms.Build.0 = Release|x86
 		{6F8E3F0E-A740-434C-B11A-AA019E0C17AA}.Release|x86.ActiveCfg = Release|x86
 		{6F8E3F0E-A740-434C-B11A-AA019E0C17AA}.Release|x86.Build.0 = Release|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Debug|x86.ActiveCfg = Debug|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Debug|x86.Build.0 = Debug|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Release|Any CPU.ActiveCfg = Release|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Release|Mixed Platforms.Build.0 = Release|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Release|x86.ActiveCfg = Release|x86
+		{73F5EDD8-38E2-4EB4-A989-D57F0CA61A43}.Release|x86.Build.0 = Release|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Debug|x86.ActiveCfg = Debug|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Debug|x86.Build.0 = Debug|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Release|Any CPU.ActiveCfg = Release|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Release|Mixed Platforms.Build.0 = Release|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Release|x86.ActiveCfg = Release|x86
+		{1BA40CAC-7B6F-4919-92EC-9952343E17FF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

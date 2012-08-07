@@ -2,9 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Numerics;
 
 namespace Euler
 {
+
+    public static class Extensions 
+    {
+        public static BigInteger Factorial(this BigInteger n) {
+
+            if (n == 0) return new BigInteger(1);
+            BigInteger product = new BigInteger(1);
+            for (BigInteger b = new BigInteger(1); b <= n; b++) {
+                product *= b;
+            }
+            return product;
+        }
+    }
+
     public class Utils
     {
         public static void OutputAnswer(string s)
@@ -426,6 +441,20 @@ namespace Euler
             // is there a fsater way to do this than relying
             // on an expensive sqrt?
             return Math.Sqrt(n) % 1 == 0;
+        }
+
+        /// <summary>
+        /// Standard Combinatorics choose function
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="r"></param>
+        /// <returns></returns>
+        public static BigInteger Choose(long n, long r)
+        {
+            BigInteger top = new BigInteger(n).Factorial();
+            BigInteger bottom = new BigInteger(r).Factorial();
+            bottom *= new BigInteger(n - r).Factorial();
+            return top / bottom;
         }
     }
 }
