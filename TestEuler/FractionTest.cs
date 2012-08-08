@@ -51,7 +51,7 @@ namespace TestEuler
         [TestMethod()]
         public void SimplifyTest()
         {
-            Fraction target = new Fraction() { numerator = 10, denominator = 2 };
+            Fraction target = new Fraction(10, 2);
             target.Simplify();
             Assert.AreEqual(5, target.numerator);
             Assert.AreEqual(1, target.denominator);
@@ -63,13 +63,34 @@ namespace TestEuler
         [TestMethod()]
         public void op_MultiplyTest()
         {
-            Fraction a = new Fraction() { numerator = 1, denominator = 2 };
-            Fraction b = new Fraction() { numerator = 2, denominator = 1 };
+            Fraction a = new Fraction(1, 2);
+            Fraction b = new Fraction(2, 1);
             Fraction actual;
             actual = (a * b);
             Assert.AreEqual(2, actual.numerator);
             Assert.AreEqual(2, actual.denominator);
         }
-        
+
+
+        /// <summary>
+        ///A test for op_Division
+        ///</summary>
+        [TestMethod()]
+        public void op_DivisionTest()
+        {
+
+            Fraction expected = new Fraction(1, 2); 
+            Fraction actual = new Fraction(1) / new Fraction(2);
+            Assert.AreEqual(true, expected == actual);
+
+            expected = new Fraction(3, 2);
+            actual = new Fraction(3) / new Fraction(2);
+            Assert.AreEqual(true, expected == actual);
+
+            actual = new Fraction(1, 2) / new Fraction(1, 6);
+            actual.Simplify();
+            expected = new Fraction(3, 1);
+            Assert.AreEqual(true, expected == actual);
+        }
     }
 }

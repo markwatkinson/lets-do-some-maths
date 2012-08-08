@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Euler;
+using System.Numerics;
 
 namespace Project033
 {
@@ -19,7 +20,7 @@ namespace Project033
                 return false;
             }
 
-            double realFraction = frac.numerator / Convert.ToDouble(frac.denominator);
+            double realFraction = Convert.ToDouble(frac.numerator) / Convert.ToDouble(frac.denominator);
             string ns = frac.numerator.ToString(),
                    ds = frac.denominator.ToString();
 
@@ -43,12 +44,12 @@ namespace Project033
 
         static void Main(string[] args)
         {
-            Fraction product = new Fraction() { denominator = 1, numerator = 1 };
+            Fraction product = new Fraction(1);
             for (int a = 10; a < 100; a++)
             {
                 for (int b = a+1; b < 100; b++)
                 {
-                    Fraction f = new Fraction() { numerator = a, denominator = b };
+                    Fraction f = new Fraction(a, b);
                     if (Cancels(f))
                     {
                         product = product * f;

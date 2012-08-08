@@ -369,7 +369,20 @@ namespace Euler
                 b = a % b;
                 a = t;
             }
-            return a;
+            return a == 0? 1 : a;
+        }
+
+        public static BigInteger gcd(BigInteger a, BigInteger b)
+        {
+            //euclid's algorithm
+            BigInteger t;
+            while (b != 0)
+            {
+                t = b;
+                b = a % b;
+                a = t;
+            }
+            return a == 0? 1 : a;
         }
 
         /// <summary>

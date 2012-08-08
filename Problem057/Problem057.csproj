@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3937384C-33D0-4084-B56A-1AD6828250CC}</ProjectGuid>
+    <ProjectGuid>{226DFF97-C830-4AA1-9B95-575376DEC55D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Project033</RootNamespace>
-    <AssemblyName>Project033</AssemblyName>
+    <RootNamespace>Problem057</RootNamespace>
+    <AssemblyName>Problem057</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
